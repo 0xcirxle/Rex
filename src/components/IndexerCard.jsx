@@ -9,10 +9,11 @@ const IndexerCard = () => {
     const [selectedChain, setSelectedChain] = useState('');
     const [contractAddress, setContractAddress] = useState('');
     const [abi, setAbi] = useState('');
+    const [event, setEvent] = useState('');
 
     const handleGenerateDB = () => {
         // database generation
-        console.log('Generating DB with:', { selectedChain, contractAddress, abi });
+        console.log('Generating DB with:', { selectedChain, contractAddress, abi, event });
     };
 
     return (
@@ -37,6 +38,12 @@ const IndexerCard = () => {
                     placeholder="ABI"
                     value={abi}
                     onChange={(e) => setAbi(e.target.value)}
+                />
+
+                <Input
+                    placeholder="Event"
+                    value={event}
+                    onChange={(e) => setEvent(e.target.value)}
                 />
 
                 <div className="flex flex-col items-center w-full justify-center mt-16">
