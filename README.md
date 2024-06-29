@@ -77,7 +77,6 @@ This indexer also consists of three main components:
 - click on generate button and wait for the indexer to finish.
 - get the JSON data on the results page
 
-
 ### Performance Considerations
 
 The indexer leverages Reth's efficient block processing capabilities. SQLite is used for its simplicity and performance for single-machine deployments. Batch inserts are used to optimize database write operations
@@ -92,22 +91,36 @@ The indexer leverages Reth's efficient block processing capabilities. SQLite is 
 
 4. Performance Optimization: Balancing real-time indexing with database write performance was challenging. We had to experiment with different batch sizes and database configurations to find the optimal setup.
 
+5. Modular Code: this was a major thing with the backend, we had to modularize the code a lot so that we could get the point of errors exactly, then we had to make the code such that any contract's data can be fetched from the node, it took us a lot of time.
+
+6. Rust: this was also a big issue with this project as both of us did not know rust at all before beginning this hackathon. So we had to learn all the essentials in 3 to 4 days timeframe. It took us some time to get familiarized with the language.
+
 ### Team Members Contribution
 - Aniruddh
-  - I focused mainly on the local node portion of the project.
-  - I wrote the ExEx, setup the node and interacted with the execution and consensus clients.
-  - I also made the front-end of our project
+  - focused mainly on the local node portion of the project.
+  - wrote the ExEx, setup the node and interacted with the execution and consensus clients.
+  - also made the front-end of our project
+- Learnings
+  - got to know the infrastructure layer in a very in depth manner
+  - learned how to setup and interact with nodes
+  - learned a completely new language Rust, and its application in the real world
+  - got my hands dirty with all the concepts i had learned so far in CSS, react 
  
 - Harrish
-  - 
-Learning from this Hackathon
+  - focused on the backend, database side of the project
+  - made all the integrations of front end and backend
+- Learnings
+  - learned about the infra layer in depth
+  - learned SQL, graphQL, MySQL, SQLite and how to work with databases
+  - learned how to build modular and robust backends in rust, it was an amazing experience
+  - had an amazing application of concepts which i had learned till now
+  
+### Learning from this Hackathon
 
-Rust Ecosystem: We gained valuable experience working with Rust in a blockchain context, appreciating its performance benefits and strong type system.
-Ethereum Internals: The project deepened our understanding of Ethereum's internal workings, particularly around event emission and chain reorganizations.
-Real-time Data Processing: We learned techniques for efficient real-time data processing and storage, balancing speed with data integrity.
-Collaboration and Project Management: Working as a team on a complex project improved our skills in code collaboration, task division, and project management in a hackathon setting.
-Blockchain Indexing Concepts: We gained insights into the challenges and solutions in blockchain data indexing, which are applicable beyond this specific project.
-Open Source Development: Contributing to and building upon open-source projects like Reth and Lighthouse taught us valuable lessons about open-source development practices.
-Problem-Solving Under Pressure: The hackathon environment honed our ability to quickly troubleshoot issues and make decisions under time constraints.
+1. Reth Ecosystem: We gained valuable experience working with Reth, this was our first time interaction and running our own node. Learned a ton about nodes and the infrastructure layer of ethereum.
+2. Rust Ecosystem: We learned a lot about rust and how it is a good language for backends and for working with ethereum infralayer. Specially its memory safety and its speed amazed us.
+3. Ethereum Internals: The project deepened our understanding of Ethereum's internal workings, particularly around event emission and chain reorganizations.
+4. Real-time Data Processing: We learned techniques for efficient real-time data processing and storage.
+5. Blockchain Indexing Concepts: We gained insights into the challenges and solutions in blockchain data indexing, which are applicable beyond this specific project.
+6. Problem-Solving Under Pressure: The hackathon environment honed our ability to quickly troubleshoot issues and make decisions under time constraints.
 
-This project has not only resulted in a functional Ethereum indexer but has also significantly expanded our skills and knowledge in blockchain development, Rust programming, and real-time data processing.
