@@ -1,7 +1,7 @@
 ## Rex [Reth based Indexer 🦀⚡️]
 
 [[Youtube Demo video](https://www.youtube.com/watch?v=C7p0q3PMeqc)]
-
+[[Frontend Website](https://rex-frontend-one.vercel.app/)]
 This project is an Ethereum indexer built using Reth (Rust Ethereum) and Lighthouse. It's designed to efficiently index and store specific events from the Ethereum Sepolia blockchain. Our indexer utilizes Reth's Execution Extensions (ExExes) to create a high-performance, real-time indexing solution.
 
 ### Key Features:
